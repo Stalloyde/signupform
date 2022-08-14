@@ -3,6 +3,11 @@
     src: url(Norse-Bold.otf);
 }
 
+:root {
+    --text-padding: 2.5em;
+    --text-font-size: 1.2rem; 
+}
+
 * {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 300;
@@ -12,8 +17,8 @@
 }
 
 body {
-    font-size: 1.1rem;
     display: flex;
+    font-size: var(--text-font-size);
 }
 
 .left-container {
@@ -36,7 +41,7 @@ body {
     width: 100%; 
     background-color: rgb(17, 17, 17);
     opacity: 0.6;
-    padding: 20px;
+    padding: 1em;
     color: white;
     text-align: center;
 }
@@ -56,12 +61,12 @@ body {
 
 .right-container {
     width: 65%;
+    height: 100vh;
     background-color: rgb(223, 217, 192);
 }
 
-
 .right-item{
-    padding: 2.5em;
+    padding: var(--text-padding);
 }
 
 .one {
@@ -72,11 +77,13 @@ body {
 }
 
 form {
+    height: 50vh;
     display:grid;
-    gap: 20px;
     grid-template-columns: auto auto;
-    background-color: rgb(253, 253, 253);
-    padding: 2.5em;
+    grid-template-rows: 0.1fr auto;
+    padding: 1em 2.5em;
+    background-color: rgba(245, 245, 245, 0.726);
+    box-shadow: 0px 5px 10px rgb(83, 81, 81);
 }
 
 h2 {
@@ -85,5 +92,34 @@ h2 {
 
 form > div {
     display: grid;
-    gap: 5px;
+    gap: 0.5em;
+    height: 5vh;
+    padding: 1em 0;
+}
+
+.box-one {
+    grid-column-start: 1;
+}
+
+input {
+    width: 20vw;
+    height: 5%;
+    border-radius: 20px 20% 30px 20% ;
+    box-shadow: inset 1px 1px 3px rgb(83, 81, 81);
+    font-size: var(--text-font-size);
+    padding: 1em;
+}
+
+button {
+    font-size: var(--text-font-size);
+    background-color: #778d63;
+    box-shadow: 0px 2px 2px rgb(83, 81, 81);
+    padding: 0.3em;
+    margin-bottom: 1em;
+    color: white;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
 }
