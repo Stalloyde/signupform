@@ -13,12 +13,16 @@ function passwordCheck () {
             pwErrorMessage.style.color = "red";         
             pwCheck2.innerHTML = "<img src=crossred.png height=20px width=20px>";
             pwCheck1.innerHTML = "<img src=crossred.png height=20px width=20px>";
+            password.style.border = "2px solid red";
+            confirmPassword.style.border = "2px solid red";
         } else if 
         (password.value === confirmPassword.value) {
             pwErrorMessage.textContent = "*Passwords match";
             pwErrorMessage.style.color = "green";
             pwCheck1.innerHTML = "<img src=greencheckicon.png height=20px width=20px>";
             pwCheck2.innerHTML = "<img src=greencheckicon.png height=20px width=20px>";
+            password.style.border = "";
+            confirmPassword.style.border = "";
         };
     }
 }

@@ -138,6 +138,10 @@ input:not(:focus):not(:placeholder-shown):valid ~ .valid-check {
     display:block;
 }
 
+input:not(:focus):not(:placeholder-shown):invalid {
+    border: 2px solid red;
+}
+
 .valid-check {
     position:absolute;
     top: 170%;
